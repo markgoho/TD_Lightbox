@@ -10,16 +10,35 @@
 	clear: both;
 }
 
+/* * {
+	border: 1px solid red;
+} */
+
 body {
 	font-family: 'Josefin Slab', serif;
 }
 
-
-
-@media (min-width: 1025px) {
-	
-
-
+header {
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	background: white;
 
 }
 
+input#search_box {
+	display: block;
+	margin: 0 auto;
+	font-size: 2em;
+}
+
+.gallery {
+	width: 980px;
+	margin: 0 auto;
+	padding-top: 60px;
+
+}
+
+.gallery img {
+	margin-right: 60px;
+}
