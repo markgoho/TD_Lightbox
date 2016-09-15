@@ -1,4 +1,4 @@
-*, *:before, *:after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,9 +10,9 @@
 	clear: both;
 }
 
-/* * {
+/** {
 	border: 1px solid red;
-} */
+}*/
 
 body {
 	font-family: 'Josefin Slab', serif;
@@ -26,19 +26,23 @@ header {
 
 }
 
-input#search_box {
+#search_box {
 	display: block;
 	margin: 0 auto;
-	font-size: 2em;
+	font-size: 22px;
+	width: 460px;
 }
 
 .gallery {
 	width: 980px;
 	margin: 0 auto;
 	padding-top: 60px;
-
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .gallery img {
-	margin-right: 60px;
+
+
 }
