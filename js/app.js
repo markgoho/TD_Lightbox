@@ -40,7 +40,7 @@ $("#gallery a").click(function() {
 	event.preventDefault();  //prevent the browser from following the link url
 	getCurrentImage(this); //call function to get image from image that was clicked
 	$overlay.show();  //show the overlay
-})
+});
 
 $leftArrow.click(function() {
 	getPreviousImage();
@@ -63,7 +63,7 @@ function getCurrentImage (currentImage) {
 
 function getPreviousImage () {
 	imageParent = $(thisImage).parent().prev(); //find the parent of the current image, then go to the previous element
-	if (imageParent.length != 0) { //if one actually exists (len != 0)
+	if (imageParent.length !== 0) { //if one actually exists (len != 0)
 		thisImage = $(imageParent).children("a"); // set the current image to the first child link
 	}
 	getCurrentImage(thisImage); //call the function on the updated current image
@@ -71,7 +71,7 @@ function getPreviousImage () {
 
 function getNextImage () {
 	imageParent = $(thisImage).parent().next(); //find the parent of the current image, then go to the next element
-	if (imageParent.length != 0) { //if one actually exists (len != 0)
+	if (imageParent.length !== 0) { //if one actually exists (len != 0)
 		thisImage = $(imageParent).children("a"); // set the current image to the first child link
 	}
 	getCurrentImage(thisImage); //call the function on the updated current image
@@ -81,4 +81,4 @@ function getNextImage () {
 //Hiding the overlay - I can't figure out how to make this work when clicking anywhere on the overlay, soo....
 $image.click(function () {  //when the IMAGE is clicked
 	$overlay.hide(); //hide the overlay
-})
+});
